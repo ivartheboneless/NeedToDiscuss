@@ -1,8 +1,9 @@
 <?php
 
  	$pageTitle = "Need to Discuss";
+	$section = null;
 	include("includes/header.php");
-	
+
 ?>
 		<div class="section catalog random">
 
