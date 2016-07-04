@@ -58,42 +58,40 @@ $catalog[104] = [
 ];
 //Movies
 $catalog[201] = [
-    "title" => "Forrest Gump",
-    "img" => "img/media/forest_gump.jpg",
-    "genre" => "Drama",
+    "title" => "The Inglorious Bastards",
+    "img" => "img/media/inglorious.png",
+    "genre" => "War",
     "format" => "DVD",
-    "year" => 1994,
+    "year" => 2009,
     "category" => "Movies",
-    "director" => "Robert Zemeckis",
+    "director" => "Quentin Tarantino",
     "writers" => [
-        "Winston Groom",
-        "Eric Roth"
+        "Quentin Tarantino"
     ],
     "stars" => [
-        "Tom Hanks",
-        "Rebecca Williams",
-        "Sally Field",
-        "Michael Conner Humphreys"
+        "Brad Pitt",
+        "Christoph Waltz",
+        "Michael Fassbender"
     ]
 ];
 $catalog[202] = [
-    "title" => "Office Space",
-    "img" => "img/media/office_space.jpg",
-    "genre" => "Comedy",
+    "title" => "The Dark Knight Rises",
+    "img" => "img/media/dark.jpg",
+    "genre" => "Action",
     "format" => "Blu-ray",
-    "year" => 1999,
+    "year" => 2012,
     "category" => "Movies",
-    "director" => "Mike Judge",
+    "director" => "Christopher Nolan",
     "writers" => [
-        "William Goldman"
+        "Christopher Nolan"
     ],
     "stars" => [
-        "Ron Livingston",
-        "Jennifer Aniston",
-        "David Herman",
-        "Ajay Naidu",
-        "Diedrich Bader",
-        "Stephen Root"
+        "Christain Bale",
+        "Michael Caine",
+        "Gary Oldman",
+        "Anne Hathaway",
+        "Tom Hardy",
+        "Morgan Freeman"
     ]
 ];
 $catalog[203] = [
@@ -120,63 +118,36 @@ $catalog[203] = [
     ]
 ];
 $catalog[204] = [
-    "title" => "The Princess Bride",
-    "img" => "img/media/princess_bride.jpg",
-    "genre" => "Comedy",
+    "title" => "Blue Jasmine",
+    "img" => "img/media/blue.jpg",
+    "genre" => "Drama",
     "format" => "DVD",
-    "year" => 1987,
+    "year" => 2013,
     "category" => "Movies",
-    "director" => "Rob Reiner",
+    "director" => "Woody Allen",
     "writers" => [
-        "William Goldman"
+        "Woody Allen"
     ],
     "stars" => [
-        "Cary Elwes",
-        "Mandy Patinkin",
-        "Robin Wright",
-        "Chris Sarandon",
-        "Christopher Guest",
-        "Wallace Shawn",
-        "AndrÃ© the Giant",
-        "Fred Savage",
-        "Peter Falk",
-        "Billy Crystal"
+        "Cate Blanchett",
+        "Sally Hawkins",
+        "Alec Baldwin",
+        "Peter Sarsgaard"
     ]
 ];
-//Music
+//other
 $catalog[301] = [
-    "title" => "Beethoven: Complete Symphonies",
-    "img" => "img/media/beethoven.jpg",
-    "genre" => "Clasical",
-    "format" => "CD",
-    "year" => 2012,
-    "category" => "Music",
-    "artist" => "Ludwig van Beethoven"
+    "title" => "FatigueFull Wania",
+    "category" => "Other",
+    "img" => "img/media/wania.jpg"
 ];
 $catalog[302] = [
-    "title" => "Elvis Forever",
-    "img" => "img/media/elvis_presley.jpg",
-    "genre" => "Rock",
-    "format" => "Vinyl",
-    "year" => 2015,
-    "category" => "Music",
-    "artist" => "Elvis Presley"
+    "title" => "Nappy Momi",
+    "category" => "Other",
+    "img" => "img/media/momi.png"
 ];
 $catalog[303] = [
-    "title" => "No Fences",
-    "img" => "img/media/garth_brooks.jpg",
-    "genre" => "Country",
-    "format" => "Cassette",
-    "year" => 1990,
-    "category" => "Music",
-    "artist" => "Garth Brooks"
-];
-$catalog[304] = [
-    "title" => "The Very Thought of You",
-    "img" => "img/media/nat_king_cole.jpg",
-    "genre" => "Jaz",
-    "format" => "MP3",
-    "year" => 2008,
-    "category" => "Music",
-    "artist" => "Nat King Cole"
+    "title" => "Fierce Mahrukh",
+    "category" => "Other",
+    "img" => "img/media/mahrukh.jpg"
 ];
