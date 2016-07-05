@@ -1,18 +1,46 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = $_POST["name"];
-  $email = $_POST["email"];
-  $details = $_POST["details"];
+  $name = trim(filter_input(INPUT_POST,"name", FILTER_SANITIZE_STRING));
+  $email = trim(filter_input(INPUT_POST,"email", FILTER_SANITIZE_EMAIL));
+  $details = trim(filter_input(INPUT_POST,"details", FILTER_SANITIZE_SPECIAL_CHARS));
 
-  echo "<pre>";
+  if($name == "" OR $email == "" OR $details == "") {
+    echo "Please fill in the required fields: Name, Email, and Details.";
+    exit;
+  }
+
+  if($_POST["eyecolor"] != "") {
+    echo "Bad form input";
+    exit;
+  }
+
+  require("includes/phpmailer/class.phpmailer.php");
+
+  $mail = new PHPMailer;
+
+  if(!$mail->ValidateAddress($email)) {
+    echo "Invalid Email Address";
+    exit;
+  }
+
   $email_body = "";
   $email_body .= "Name " . $name . "\n";
   $email_body .= "Email " . $email . "\n";
   $email_body .= "Details " . $details . "\n";
-  echo $email_body;
-  echo "</pre>";
 
-  //To Do: Send email.
+  $mail->setFrom($email, $name);
+  $mail->addAddress('ammar2411@gmail.com', 'Ammar');
+  $mail->isHTML(false);
+
+  $mail->Subject = 'Discussion Forum Suggestion from ' . $name;
+  $mail->Body = $email_body;
+
+  if(!$mail->send()) {
+    echo "Message could not be sent.";
+    echo "Mailer Error: " . $mail->ErrorInfo;
+    exit;
+  }
+
   header("location:suggest.php?status=thanks"); //redirection to the thank you page.
 }
 
@@ -42,6 +70,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
           <tr>
             <th><label for="details">Message</label></th>
             <td><textarea name="details" id="details"></textarea></td>
+          </tr>
+          <tr style="display:none">
+            <th><label for="eyecolor">Eye Color</label></th>
+            <td><input type="text" id="eyecolor" name="eyecolor"/></td>
           </tr>
         </table>
         <input type="submit" value="Send" />
